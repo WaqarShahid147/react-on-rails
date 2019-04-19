@@ -1,0 +1,22 @@
+.section{
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: 0 0 14px 4px rgba(78, 116, 124, 0.08);
+  margin: 16px 16px 32px;
+  padding: 32px 24px;
+  position: relative;
+}
+
+.section:after{
+  content: '';
+  position: absolute;
+  bottom:-32px;
+  height: 32px;
+  left: 49.5%;
+  width: 1px;
+  border: 2px solid #e7edee;
+}
+
+.section:last-child{
+  margin-bottom: 20px;
+}

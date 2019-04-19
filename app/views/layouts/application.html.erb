@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css', integrity: 'sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb', crossorigin: 'anonymous' %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Montserrat:500,600,700|Source+Sans+Pro:400,600,700' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= render partial: 'layouts/js_setup' %>
+    <%= javascript_include_tag 'application' %>
+
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <%= render partial: 'layouts/favicon' %>
+    <!-- Allow installing the app to the homescreen -->
+    <link rel="manifest" href="client/app/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= render partial: 'layouts/google_analytics' %>
+    <%= javascript_pack_tag 'application' %>
+    <title><%= yield(:page_title) %></title>
+  </head>
+
+  <body>
+    <%= render partial: 'layouts/flash' %>
+    <%= yield %>
+  </body>
+</html>
